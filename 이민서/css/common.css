@@ -1,0 +1,226 @@
+@charset 'utf-8';
+
+@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+:root {
+  --black: #000;
+  --black20: rgba(0, 0, 0, 0.2);
+  --white: #fff;
+  --white30: rgba(255, 255, 255, 0.3);
+  --gray1: #bababa;
+  --gray2: #d7d7d7;
+}
+
+html {
+  font-size: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font: 2rem /1.5 'PP Neue Montreal', 'Pretendard', sans-serif;
+  color: var(--text-color);
+  word-break: keep-all;
+  text-transform: uppercase;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+.inner {
+  width: 91.6666%;
+  margin: 0 auto;
+  /* background: rgba(255, 255, 0, 0.15); */
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0; /* 
+  background: #f00; */
+  width: 100%;
+  z-index: 1;
+  background: var(--black20);
+  border-bottom: 1px solid var(--white);
+}
+
+#header nav {
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  display: block;
+  width: 9.9rem;
+  height: 6rem;
+  background: url(../img/logo.png) no-repeat 50% / contain;
+}
+.gnb {
+  display: flex;
+  margin-left: auto;
+  margin-right: 17rem;
+}
+.gnb li a {
+  display: block;
+  margin: 0 3.5rem;
+  /* border: 1px solid #000; */
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #fff;
+  position: relative;
+}
+.gnb li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background: var(--white);
+  transition: 0.4s;
+}
+.gnb li a:hover::after {
+  width: 100%;
+}
+.util {
+  display: flex;
+  gap: 40px;
+}
+.btn-search {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: url(../img/ico-ser.png) no-repeat 50%;
+}
+.btn-cart {
+  display: block;
+  width: 2.3rem;
+  height: 2.2rem;
+  background: url(../img/ico-cart.png) no-repeat 50%;
+}
+.btn-menu {
+  display: none;
+}
+#footer {
+  padding: 15rem 0;
+}
+
+.foot-con strong {
+  display: block;
+  width: 21.5rem;
+  height: 13.3rem;
+  background: url(../img/foot-logo.png) no-repeat 50% / contain;
+  margin: 0 auto;
+}
+.foot-con-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22rem;
+}
+.foot-con-info-list {
+  display: flex;
+  gap: 6rem;
+}
+.foot-con-info-list li dl dt {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 4.3rem;
+  line-height: 100%;
+}
+.foot-con-info-list li dl dd {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: #4b4b4b;
+  line-height: 100%;
+}
+.foot-con-info-contact-form .f-row {
+  display: flex;
+  font-size: 1.6rem;
+  width: 36.8rem;
+  justify-content: space-between;
+  margin-top: 3rem;
+  border-bottom: 1px solid #000;
+}
+.foot-con-info-contact-form .f-row input {
+  flex-grow: 1;
+}
+.foot-con-info-contact-form .f-row .btn-search {
+  /* background: #5f5; */
+  width: 80px;
+  height: 40px;
+  text-align: right;
+  font-weight: 500;
+}
+.foot-con-info-contact b {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+/* 타블렛디자인 */
+@media (max-width: 768px) {
+  .inner {
+    width: 91.9354%;
+    margin: 0 auto;
+    background: rgba(255, 255, 0, 0.15);
+  }
+  #header nav {
+    height: 8rem;
+  }
+
+  .logo a {
+    width: 7.4rem;
+    height: 4.6rem;
+  }
+  .gnb {
+    display: none;
+  }
+  .util {
+    gap: 2rem;
+  }
+  .btn-search {
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url(../img/ico-ser.png) no-repeat 50% / contain;
+  }
+  .btn-cart {
+    width: 2rem;
+    height: 1.8rem;
+    background: url(../img/ico-cart.png) no-repeat 50% / contain;
+  }
+  .btn-menu {
+    display: block;
+    /* w3.6r+h3.6r+bd+bdrs50p+bg */
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url(../img/menu.png) no-repeat 50%;
+    margin-left: 2rem;
+  }
+}
