@@ -68,19 +68,6 @@ img {
   background: var(--black20);
   border-bottom: 1px solid var(--white);
 }
-header::after {
-  content: '';
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: #00f;
-  transition: 0.3s;
-}
-header.active::after {
-  height: 300px;
-}
 
 #header nav {
   height: 10rem;
@@ -111,32 +98,11 @@ header.active::after {
   color: #fff;
   position: relative;
 }
-.submenu {
-  position: absolute;
-  top: 43px;
-  left: 0;
-  width: 100%;
-  padding-top: 30px;
-
-  /* 제이쿼리 동작을 만들기위한 준비 */
-  display: none;
-}
 
 .gnb > li {
   position: relative;
 }
-.submenu li a {
-  display: block;
-  border: 1px solid #ff0;
-  padding: 1rem;
-  text-align: center;
-  background: #333;
-  color: #fff;
-}
 
-.gnb > li.on {
-  background: skyblue;
-}
 .btn-more {
   font-size: 2.4rem;
   font-weight: 500;
