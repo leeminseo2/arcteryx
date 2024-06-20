@@ -2,7 +2,7 @@
 .visual {
   /* height: 108rem; */
   position: relative;
-  height: 56.25vw;
+  height: 108rem;
 }
 .btn-play {
   position: absolute;
@@ -13,7 +13,7 @@
   border-radius: 50%;
   border: 1px solid var(--white);
   bottom: 28.8rem;
-  left: 8rem;
+  left: 4.1666%;
   z-index: 1;
 }
 
@@ -27,7 +27,7 @@
   /* background: #5f5; */
 }
 .visual-slider {
-  height: 56.25vw;
+  height: 100%;
 }
 .visual-slider .slide-item {
   height: 100%;
@@ -47,9 +47,10 @@
   /* posa+t50p+l50p+trft */
   position: absolute;
   bottom: 7.9rem;
-  left: 8rem;
+  padding-left: 4.1666%;
+  padding-right: 4.1666%;
   color: #fff;
-  width: 50%;
+  width: 100%;
 }
 .visual-title h2 {
   font-size: 4rem;
@@ -127,7 +128,7 @@
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  padding-right: 8rem;
+  padding-right: 8.3333%;
 }
 .new-collection-title h3 {
   font-size: 3.6458vw;
@@ -143,9 +144,11 @@
 }
 .new-collection-wrap {
   grid-area: col-wrap;
-  margin-right: 8rem;
+  padding-right: 8.3333%;
+  padding-left: 8.3333%;
   display: flex;
   align-items: center;
+  /* align-items: center; */
 }
 .new-collection-list {
   display: flex;
@@ -175,10 +178,9 @@
 }
 .new-collection-con {
   grid-area: con;
-  padding-right: 8rem;
+  padding: 8.3333%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .new-collection-con strong {
   font-size: 2.2rem;
@@ -191,6 +193,7 @@
   font-weight: 500;
   color: var(--white);
   line-height: 100%;
+  text-transform: capitalize;
 }
 .new-collection-con p {
   line-height: 160%;
@@ -357,7 +360,9 @@
 .design-ment {
   margin-top: 28rem;
 }
-
+.design-ment-item {
+  width: 100%;
+}
 .design-ment-item:nth-child(2) {
   text-align: right;
 }
@@ -388,7 +393,7 @@
 }
 
 .ment-bag {
-  transform: translate(50px, 0);
+  transform: translate(20%, 0);
 }
 
 .ment-shoes {
@@ -521,22 +526,91 @@
 }
 
 /* 분기 */
-@media (max-width: 1350px) {
+@media (max-width: 1520px) {
+  .new-collection-con strong {
+    font-size: 1.4vw;
+  }
+
+  .new-collection-con h4 {
+    font-size: 4vw;
+  }
+  .new-collection-con p {
+    font-size: 1.3526vw;
+    margin-top: 3.2rem;
+  }
+}
+@media (max-width: 1300px) {
+  .new-collection {
+    position: relative;
+    height: 120rem;
+    background: url(../img/NC-bg.png) no-repeat 0 100% / cover;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 5rem 81rem 34rem;
+    grid-template-areas:
+      'title title'
+      'model col-wrap'
+      'con con';
+  }
+  .new-collection-title {
+    background: #fff;
+    padding-right: 4.1666%;
+    padding-left: 4.1666%;
+  }
+  .new-collection-con strong {
+    font-size: 2.2rem;
+  }
+  .new-collection-title h3 {
+    font-size: 4.8rem;
+  }
+  .new-collection-model figure {
+    width: 103%;
+  }
+
+  .new-collection-con {
+    padding: 4.1666%;
+    background: #000;
+    z-index: 1;
+    justify-content: center;
+  }
+  .new-collection-con h4 {
+    font-size: 5.3rem;
+  }
+  .new-collection-con p {
+    width: 80%;
+    font-size: 2rem;
+    margin-top: 3.2rem;
+  }
+}
+@media (max-width: 1180px) {
   .visual-title {
-    /* background: #5f5; */
-    /* posa+t50p+l50p+trft */
-    width: 100%;
+    padding-left: 4.0324%;
+    padding-right: 4.0324%;
+  }
+  .introduce {
+    /* height: 1321px; */
+    height: 105vw;
+  }
+  .introduce .introduce-title h3 {
+    font-size: 7vw;
+  }
+  .introduce .introduce-title h3 strong {
+    font-size: 7vw;
+    font-weight: 700;
+  }
+  .introduce .introduce-title p {
+    font-size: 2.85vw;
   }
 }
 
 /* 타블렛 디자인 */
 @media (max-width: 768px) {
   .visual {
-    height: 120.4688vw;
+    height: 89.8rem;
     position: relative;
   }
   .visual-slider {
-    height: 120.4688vw;
+    height: 89.8rem;
   }
   .visual .visual-arcterycx {
     top: 9.5rem;
@@ -545,16 +619,15 @@
   .btn-play {
     position: absolute;
     bottom: 20rem;
-    left: 3rem;
+    left: 3.9062%;
   }
   .visual-title {
     /* background: #5f5; */
     /* posa+t50p+l50p+trft */
     position: absolute;
     bottom: 4.8rem;
-    left: 3rem;
+
     color: #fff;
-    width: 100%;
   }
   .visual-title h2 {
     font-size: 2.8rem;
@@ -572,15 +645,15 @@
     top: 17.6rem;
   }
   .introduce .introduce-title h3 {
-    font-size: 7rem;
+    font-size: 9.1145vw;
   }
   .introduce .introduce-title h3 strong {
-    font-size: 7rem;
+    font-size: 9.1145vw;
     font-weight: 700;
   }
   .introduce .introduce-title p {
     margin-top: 4rem;
-    font-size: 2rem;
+    font-size: 2.6041vw;
   }
 
   .new-collection {
@@ -597,7 +670,7 @@
   }
   .new-collection-title {
     background: #fff;
-    padding: 0 3rem;
+    padding: auto 3.9062%;
   }
   .new-collection-title h3 {
     font-size: 4.8rem;
@@ -605,8 +678,10 @@
   .new-collection-model figure {
     width: 103%;
   }
+
   .new-collection-wrap {
-    margin-right: 3rem;
+    margin-right: 3.9062%;
+    margin-left: 3.9062%;
   }
 
   .new-collection-list li {
@@ -622,8 +697,10 @@
   }
 
   .new-collection-con {
-    padding: 3rem;
+    padding: 3.9062%;
     background: #000;
+    z-index: 1;
+    justify-content: center;
   }
   .new-collection-con h4 {
     font-size: 5.3rem;
@@ -635,8 +712,8 @@
   }
 
   .best-sellers-title {
-    padding-right: 3rem;
-    padding-left: 3rem;
+    padding-right: 3.9062%;
+    padding-left: 3.9062%;
   }
   .best-sellers-title h3 {
     font-size: 4.8rem;
@@ -820,7 +897,134 @@
     font-size: 3rem;
   }
 }
+@media (max-width: 620px) {
+  .new-collection {
+    position: relative;
+    height: 120rem;
+    background: url(../img/NC-bg.png) no-repeat 0 100% / cover;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5rem 50.9rem 26.5rem 39.4rem;
+    grid-template-areas:
+      'title '
+      'model'
+      'col-wrap'
+      'con';
+    overflow: hidden;
+  }
+  .new-collection-title {
+    background: #fff;
+    padding: 0 5.3333%;
+  }
+  .new-collection-title h3 {
+    font-size: 3.2rem;
+  }
+  .new-collection-model figure {
+    width: 85%;
+  }
+  .new-collection-model {
+    grid-area: model;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* 추가: 그리드 영역을 벗어나지 않도록 설정 */
+    position: static;
+  }
 
+  .new-collection-model figure {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+  }
+
+  .new-collection-model img {
+    width: 100%; /* 이미지 너비 100% */
+    height: auto; /* 이미지 높이 자동으로 조정 */
+    object-fit: cover; /* 이미지 크기 조정 */
+    position: absolute; /* 이미지를 절대 위치로 설정 */
+    top: 30px; /* 위쪽으로 20px 내리기 */
+    left: 0; /* 좌측 정렬 */
+  }
+  .new-collection-wrap {
+    margin-right: 5.3333%;
+    margin-left: 5.3333%;
+    border-top: 1px solid var(--white30);
+  }
+
+  .new-collection-list li {
+    width: 16rem;
+    height: 16rem;
+  }
+  .new-collection-list li p {
+    font-size: 1.2rem;
+  }
+  .new-collection-list li figure {
+    width: 13rem;
+    height: 13rem;
+  }
+  .new-collection-list li figure img {
+    width: 80%;
+  }
+
+  .new-collection-con {
+    padding: 5.3333%;
+    background: #000;
+  }
+  .new-collection-con h4 {
+    font-size: 5rem;
+    width: 80%;
+  }
+  .new-collection-con p {
+    width: 80%;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+  .new-collection::before {
+    height: 0;
+  }
+}
+@media (max-width: 526px) {
+  .visual {
+    height: 84rem;
+  }
+  .visual-slider {
+    height: 84rem;
+  }
+  .visual-title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    bottom: auto;
+  }
+  .visual-title p {
+    display: none;
+  }
+  .btn-play {
+    bottom: 3rem;
+  }
+  .btn-more {
+    text-indent: -999px;
+    overflow: hidden;
+  }
+  .introduce {
+    height: 166vw;
+  }
+  .introduce .introduce-title h3 {
+    font-size: 11vw;
+  }
+  .introduce .introduce-title h3 strong {
+    font-size: 11vw;
+  }
+  .introduce .introduce-title p {
+    margin-top: 3rem;
+    font-size: 3.8vw;
+  }
+}
 @media (max-width: 375px) {
   .visual {
     height: 80.5rem;
@@ -834,7 +1038,7 @@
   }
   .btn-play {
     bottom: 3rem;
-    left: 2rem;
+    left: 5.3333%;
   }
   .visual-title {
     top: 50%;
@@ -859,14 +1063,14 @@
     width: 100%;
   }
   .introduce .introduce-title h3 {
-    font-size: 4.8rem;
+    font-size: 12.8vw;
   }
   .introduce .introduce-title h3 strong {
-    font-size: 4.8rem;
+    font-size: 12.8vw;
   }
   .introduce .introduce-title p {
     margin-top: 3rem;
-    font-size: 1.8rem;
+    font-size: 4.8vw;
   }
 
   .new-collection {
@@ -881,10 +1085,11 @@
       'model'
       'col-wrap'
       'con';
+    overflow: hidden;
   }
   .new-collection-title {
     background: #fff;
-    padding: 0 2rem;
+    padding: 0 5.3333%;
   }
   .new-collection-title h3 {
     font-size: 3.2rem;
@@ -892,9 +1097,36 @@
   .new-collection-model figure {
     width: 85%;
   }
+  .new-collection-model {
+    grid-area: model;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* 추가: 그리드 영역을 벗어나지 않도록 설정 */
+    position: static;
+  }
+
+  .new-collection-model figure {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+  }
+
+  .new-collection-model img {
+    width: 100%; /* 이미지 너비 100% */
+    height: auto; /* 이미지 높이 자동으로 조정 */
+    object-fit: cover; /* 이미지 크기 조정 */
+    position: absolute; /* 이미지를 절대 위치로 설정 */
+    top: 30px; /* 위쪽으로 20px 내리기 */
+    left: 0; /* 좌측 정렬 */
+  }
   .new-collection-wrap {
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 5.3333%;
+    margin-left: 5.3333%;
     border-top: 1px solid var(--white30);
   }
 

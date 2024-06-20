@@ -52,6 +52,8 @@ button {
 img {
   max-width: 100%;
 }
+
+/* 데스크탑 디자인 */
 .inner {
   width: 91.6666%;
   margin: 0 auto;
@@ -228,9 +230,8 @@ img {
   font-weight: 500;
   line-height: 100%;
 }
-
-/* 타블렛디자인 */
-@media (max-width: 768px) {
+/* 분기 */
+@media (max-width: 1180px) {
   .inner {
     width: 91.9354%;
     margin: 0 auto;
@@ -281,7 +282,10 @@ img {
     background: url(../img/menu.png) no-repeat 50%;
     margin-left: 2rem;
   }
+}
 
+/* 타블렛디자인 */
+@media (max-width: 768px) {
   #footer {
     padding: 7rem 0;
   }
@@ -327,7 +331,7 @@ img {
     font-size: 4rem;
   }
 }
-
+/* 모바일 디자인 */
 @media (max-width: 375px) {
   .inner {
     width: 89.3333%;
