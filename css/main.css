@@ -423,7 +423,8 @@
 .main-keyword figure {
   position: relative;
   width: 50%;
-  height: 96rem;
+
+  aspect-ratio: 1/1;
 }
 .main-keyword figure img {
   width: 100%;
@@ -478,22 +479,29 @@
 
 .main-keyword-rebird-con {
   width: 50%;
-  height: 96rem;
-  padding: 10rem 8rem;
+  aspect-ratio: 1/1;
+  padding: 4.1666%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .main-keyword-veliance-con {
   width: 50%;
-  height: 96rem;
-  padding: 10rem 8rem;
+  aspect-ratio: 1/1;
+  padding: 4.1666%;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-keyword-veliance-con dd {
+  margin-left: auto;
 }
 .main-keyword strong {
   font-size: 2.4rem;
   font-weight: 500;
 }
-.main-keyword dl {
-  margin-top: 41rem;
-}
+
 .main-keyword dt {
   font-weight: 500;
   font-size: 10rem;
@@ -503,6 +511,7 @@
   font-size: 2.4rem;
   line-height: 160%;
   margin-top: 5rem;
+  width: 70%;
 }
 @keyframes marquee {
   100% {
