@@ -17,13 +17,17 @@ html {
   font-size: 62.5%;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font: 2rem /1.5 'PP Neue Montreal', 'Pretendard', sans-serif;
   color: var(--text-color);
   word-break: keep-all;
   text-transform: uppercase;
   min-width: 320px;
-  overflow-x: hidden;
 }
 
 a {
@@ -106,16 +110,23 @@ img {
 }
 
 .btn-more {
-  font-size: 2.4rem;
-  font-weight: 500;
   display: flex;
   gap: 1.6rem;
-  color: var(--black);
+
   align-items: center;
   position: relative;
   transition: 0.4s;
 }
-.btn-more:hover {
+.btn-more p {
+  font-size: 2.4rem;
+  font-weight: 500;
+
+  color: var(--black);
+
+  transition: 0.4s;
+  z-index: 2;
+}
+.btn-more:hover p {
   color: var(--white);
 }
 .btn-more::before {
@@ -127,7 +138,7 @@ img {
   border-radius: 50px;
   position: absolute;
   right: 0;
-  z-index: 0;
+
   transition: 0.4s;
 }
 .btn-more:hover::before {
@@ -233,7 +244,6 @@ img {
 /* 분기 */
 @media (max-width: 1180px) {
   .inner {
-    width: 91.9354%;
     margin: 0 auto;
     /* background: rgba(255, 255, 0, 0.15); */
   }
@@ -282,10 +292,6 @@ img {
     background: url(../img/menu.png) no-repeat 50%;
     margin-left: 2rem;
   }
-}
-
-/* 타블렛디자인 */
-@media (max-width: 768px) {
   #footer {
     padding: 7rem 0;
   }
@@ -314,7 +320,7 @@ img {
 
   .foot-con-info-contact-form .f-row {
     font-size: 1.4rem;
-    width: 45.2rem;
+    width: 60rem;
     margin-top: 2rem;
   }
   .foot-con-info-contact-form .f-row input {
@@ -331,15 +337,46 @@ img {
     font-size: 4rem;
   }
 }
+
+/* 타블렛디자인 */
+@media (max-width: 768px) {
+  .inner {
+    width: 92.1875%;
+  }
+  .foot-con-info-contact-form .f-row {
+    width: 45.5rem;
+  }
+}
+@media (max-width: 620px) {
+  .btn-more {
+    text-indent: -999px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 526px) {
+  .foot-con-info-contact-form .f-row {
+    width: 32.5rem;
+  }
+  .foot-con-info-contact-form .f-row .btn-search {
+    /* background: #5f5; */
+    width: 80px;
+    height: 40px;
+    text-align: right;
+    font-weight: 500;
+  }
+  .foot-con-info-contact b {
+    font-size: 4rem;
+  }
+  .foot-con-info-list li dl dt {
+    font-size: 1.2rem;
+  }
+}
 /* 모바일 디자인 */
 @media (max-width: 375px) {
   .inner {
     width: 89.3333%;
   }
-  .btn-more {
-    text-indent: -999px;
-    overflow: hidden;
-  }
+
   #footer {
     padding: 5rem 0;
   }
@@ -362,19 +399,5 @@ img {
 
   .foot-con-info-contact-form .f-row {
     width: 28rem;
-  }
-
-  .foot-con-info-contact-form .f-row .btn-search {
-    /* background: #5f5; */
-    width: 80px;
-    height: 40px;
-    text-align: right;
-    font-weight: 500;
-  }
-  .foot-con-info-contact b {
-    font-size: 4rem;
-  }
-  .foot-con-info-list li dl dt {
-    font-size: 1.2rem;
   }
 }

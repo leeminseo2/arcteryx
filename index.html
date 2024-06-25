@@ -8,7 +8,14 @@
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+
+
   <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./js/script.js"></script>
 
 </head>
 
@@ -86,48 +93,62 @@
 
       <div class="new-collection-title">
         <h3>new collection</h3>
-        <a href="#" class="btn-more">more</a>
+        <a href="#" class="btn-more">
+          <p>more</p>
+        </a>
       </div>
 
       <div class="new-collection-model">
         <figure><img src="./img/model.png" alt="모델"></figure>
       </div>
 
-      <div class="new-collection-wrap">
-        <ul class="new-collection-list">
-          <li class="new-collection-item1">
-            <a href="#">
-              <figure><img src="./img/col-list1.png" alt=""></figure>
-              <p>PROTON LIGHTWEIGHT HOODY WOMEN'S</p>
-            </a>
-          </li>
-          <li class="new-collection-item2">
-            <a href="#">
-              <figure><img src="./img/col-list2.png" alt=""></figure>
-              <p>INDEX GEAR ORGANIZER</p>
-            </a>
-          </li>
-          <li class="new-collection-item3">
-            <a href="#">
-              <figure><img src="./img/col-list3.png" alt=""></figure>
-              <p>VERTEX GTX</p>
-            </a>
-          </li>
-          <li class="new-collection-item4">
-            <a href="#">
-              <figure><img src="./img/col-list4.png" alt=""></figure>
-              <p>GAMMA LIGHTWEIGT SHORT</p>
-            </a>
-          </li>
-        </ul>
-        <div class="indicater-group">
-          <div class="bar-whole">
-            <div class="bar-now"></div>
+
+      <div class="newcollection-slider-wrap">
+        <div class="swiper newcollection-slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="new-collection-item new-collection-item1">
+                <a href="#">
+                  <figure><img src="./img/col-list1.png" alt=""></figure>
+                  <p>PROTON LIGHTWEIGHT HOODY WOMEN'S</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="new-collection-item new-collection-item2">
+                <a href="#">
+                  <figure><img src="./img/col-list2.png" alt=""></figure>
+                  <p>INDEX GEAR ORGANIZER</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="new-collection-item new-collection-item3">
+                <a href="#">
+                  <figure><img src="./img/col-list3.png" alt=""></figure>
+                  <p>INDEX GEAR ORGANIZER</p>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="new-collection-button">
-            <a href="#" class="pre-btn"><i class="hidden">prev</i></a>
-            <a href="#" class="next-btn"><i class="hidden">next</i></a>
+          <div class="col-swiper-pagination"></div>
+          <!-- If we need pagination -->
+
+
+          <!-- If we need navigation buttons -->
+          <div class="col-btn-wrap">
+            <button type="button" class="btn-before-white">
+              <i class="hidden">이전</i>
+            </button>
+            <button type="button" class="btn-after-white">
+              <i class="hidden">다음</i>
+            </button>
           </div>
+
+
+
         </div>
       </div>
 
@@ -153,119 +174,131 @@
     <section class="best-sellers">
       <div class="best-sellers-title">
         <h3>best sellers</h3>
-        <a href="#" class="btn-more">more</a>
+        <a href="#" class="btn-more">
+          <p>more</p>
+        </a>
       </div>
 
-      <ul class="best-sellers-list">
-        <li class="best-sellers-list-item">
-          <a href="#">
-            <div>
-              <figure>
-                <img class="item1" src="./img/best-seller-list1.png" alt="">
-                <img class="item-hover1" src="./img/best-seller-hover1.png" alt="">
-              </figure>
+      <div class="bestseller-slider-wrap">
+        <div class="swiper bestseller-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="best-sellers-list-item">
+                <a href="#">
+                  <div>
+                    <figure>
+                      <img class="item1" src="./img/best-seller-list1.png" alt="">
+                      <img class="item-hover1" src="./img/best-seller-hover1.png" alt="">
+                    </figure>
+                  </div>
+                  <div class="best-sellers-list-con">
+                    <strong>버텍스GTXsca</strong>
+                    <p>
+                      <span>T-shirts</span>
+                      <span>₩350,000</span>
+                    </p>
+                  </div>
+                </a>
+                <div class="best-sellers-list-hover">
+                  <ul class="best-sellers-list-hover-size">
+                    <li>XS</li>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                  </ul>
+                  <a href="#" class="btn-add-to-cart">ADD TO CART</a>
+                </div>
+              </div>
             </div>
-            <div class="best-sellers-list-con">
-              <strong>버텍스GTXsca</strong>
-              <p>
-                <span>T-shirts</span>
-                <span>₩350,000</span>
-              </p>
+
+            <div class="swiper-slide">
+              <div class="best-sellers-list-item">
+                <a href="#">
+                  <div>
+                    <figure>
+                      <img src="./img/best-seller-list2.png" alt="">
+                    </figure>
+                  </div>
+                  <div class="best-sellers-list-con">
+                    <strong>맨티스 26 백팩</strong>
+                    <p>
+                      <span>bag</span>
+                      <span>₩290,000</span>
+                    </p>
+                  </div>
+                </a>
+                <div class="best-sellers-list-hover">
+                  <ul class="best-sellers-list-hover-size">
+                    <li>XS</li>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                  </ul>
+                  <a href="#" class="btn-add-to-cart">ADD TO CART</a>
+                </div>
+              </div>
             </div>
-          </a>
-          <div class="best-sellers-list-hover">
-            <ul class="best-sellers-list-hover-size">
-              <li>XS</li>
-              <li>S</li>
-              <li>M</li>
-              <li>L</li>
-              <li>XL</li>
-            </ul>
-            <a href="#" class="btn-add-to-cart">ADD TO CART</a>
+
+
+            <div class="swiper-slide">
+              <div class="best-sellers-list-item">
+                <a href="#">
+                  <div>
+                    <figure><img src="./img/best-seller-list3.png" alt=""></figure>
+                  </div>
+                  <div class="best-sellers-list-con">
+                    <strong>감마 팬츠 남성</strong>
+                    <p>
+                      <span>PANTS</span>
+                      <span>₩350,000</span>
+                    </p>
+                  </div>
+                </a>
+                <div class="best-sellers-list-hover">
+                  <ul class="best-sellers-list-hover-size">
+                    <li>XS</li>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                  </ul>
+                  <a href="#" class="btn-add-to-cart">ADD TO CART</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="best-sellers-list-item">
+                <a href="#">
+                  <div>
+                    <figure><img src="./img/best-seller-list4.png" alt=""></figure>
+                  </div>
+                  <div class="best-sellers-list-con">
+                    <strong>감마 재킷 여성</strong>
+                    <p>
+                      <span>jacket</span>
+                      <span>₩350,000</span>
+                    </p>
+                  </div>
+                </a>
+                <div class="best-sellers-list-hover">
+                  <ul class="best-sellers-list-hover-size">
+                    <li>XS</li>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                  </ul>
+                  <a href="#" class="btn-add-to-cart">ADD TO CART</a>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </li>
-
-
-
-
-
-        <li class="best-sellers-list-item">
-          <a href="#">
-            <div>
-              <figure>
-                <img src="./img/best-seller-list2.png" alt="">
-              </figure>
-            </div>
-            <div class="best-sellers-list-con">
-              <strong>맨티스 26 백팩</strong>
-              <p>
-                <span>bag</span>
-                <span>₩290,000</span>
-              </p>
-            </div>
-          </a>
-          <div class="best-sellers-list-hover">
-            <ul class="best-sellers-list-hover-size">
-              <li>XS</li>
-              <li>S</li>
-              <li>M</li>
-              <li>L</li>
-              <li>XL</li>
-            </ul>
-            <a href="#" class="btn-add-to-cart">ADD TO CART</a>
-          </div>
-        </li>
-
-        <li class="best-sellers-list-item">
-          <a href="#">
-            <div>
-              <figure><img src="./img/best-seller-list3.png" alt=""></figure>
-            </div>
-            <div class="best-sellers-list-con">
-              <strong>감마 팬츠 남성</strong>
-              <p>
-                <span>PANTS</span>
-                <span>₩350,000</span>
-              </p>
-            </div>
-          </a>
-          <div class="best-sellers-list-hover">
-            <ul class="best-sellers-list-hover-size">
-              <li>XS</li>
-              <li>S</li>
-              <li>M</li>
-              <li>L</li>
-              <li>XL</li>
-            </ul>
-            <a href="#" class="btn-add-to-cart">ADD TO CART</a>
-          </div>
-        </li>
-
-        <li class="best-sellers-list-item">
-          <a href="#">
-            <div>
-              <figure><img src="./img/best-seller-list4.png" alt=""></figure>
-            </div>
-            <div class="best-sellers-list-con">
-              <strong>감마 재킷 여성</strong>
-              <p>
-                <span>jacket</span>
-                <span>₩350,000</span>
-              </p>
-            </div>
-          </a>
-          <div class="best-sellers-list-hover">
-            <ul class="best-sellers-list-hover-size">
-              <li>XS</li>
-              <li>S</li>
-              <li>M</li>
-              <li>L</li>
-              <li>XL</li>
-            </ul>
-            <a href="#" class="btn-add-to-cart">ADD TO CART</a>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
 
       <!-- <div class="best-indicater-group">
         <div class="best-bar-whole">
