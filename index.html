@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arcterycx</title>
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
 
@@ -20,7 +20,58 @@
 </head>
 
 <body>
+  <div class="dim"></div>
+  <!-- 전체메뉴 : 모바일 -->
+  <div class="m-submenu-wrap">
+    <!-- button:button.btn-close -->
+    <button type="button" class="btn-close"><i class="hidden">닫기</i></button>
 
+    <ul class="m-gnb">
+
+      <li>
+        <strong>Men</strong>
+
+        <ul class="m-gnb-sub">
+          <li><a href="#">PANTS</a></li>
+          <li><a href="#">SHIRTS&TOP</a></li>
+          <li><a href="#">VASE LAYER</a></li>
+          <li><a href="#">FLEECE</a></li>
+          <li><a href="#">JACKET</a></li>
+        </ul>
+
+        </dl>
+      </li>
+
+      <li>
+        <strong>Women</strong>
+        <ul class="m-gnb-sub">
+          <li><a href="#">PANTS</a></li>
+          <li><a href="#">SHIRTS&TOP</a></li>
+          <li><a href="#">VASE LAYER</a></li>
+          <li><a href="#">FLEECE</a></li>
+          <li><a href="#">JACKET</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Foot Wear</strong>
+        <ul class="m-gnb-sub">
+          <li><a href="#">HIKE SHOES</a></li>
+          <li><a href="#">CLIMB SHOES</a></li>
+          <li><a href="#">RUN SHOES</a></li>
+        </ul>
+      </li>
+      <li>
+        <strong>Explore</strong>
+        <ul class="m-gnb-sub">
+          <li><a href="#">WHO WE ARE</a></li>
+          <li><a href="#">BIRD LOG</a></li>
+          <li><a href="#">REBIRD</a></li>
+          <li><a href="#">VEILANCE</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
   <!-- 헤더 -->
   <a href="#container" class="skip hidden">본문 바로가기</a>
   <header id="header">
@@ -29,16 +80,42 @@
         <h1 class="logo"><a href="#"><i class="hidden">arctertcx</i></a></h1>
         <ul class="gnb">
           <li>
-            <a href="#">Men</a>
+            <a href="sub1.html"><b>Men</b></a>
+            <ul class="submenu">
+              <li><a href="#">PANTS</a></li>
+              <li><a href="#">SHIRTS&TOP</a></li>
+              <li><a href="#">VASE LAYER</a></li>
+              <li><a href="#">FLEECE</a></li>
+              <li><a href="#">JACKET</a></li>
+            </ul>
           </li>
           <li>
-            <a href="#">Women</a>
+            <a href="#"><b>Women</b></a>
+            <ul class="submenu">
+              <li><a href="#">PANTS</a></li>
+              <li><a href="#">SHIRTS&TOP</a></li>
+              <li><a href="#">VASE LAYER</a></li>
+              <li><a href="#">FLEECE</a></li>
+              <li><a href="#">JACKET</a></li>
+            </ul>
           </li>
           <li>
-            <a href="#">Foot Wear</a>
+            <a href="#"><b>Foot Wear</b></a>
+            <ul class="submenu">
+              <li><a href="#">HIKE SHOES</a></li>
+              <li><a href="#">CLIMB SHOES</a></li>
+              <li><a href="#">RUN SHOES</a></li>
+
+            </ul>
           </li>
           <li>
-            <a href="#">Explore</a>
+            <a href="#"><b>Explore</b></a>
+            <ul class="submenu">
+              <li><a href="#">WHO WE ARE</a></li>
+              <li><a href="#">BIRD LOG</a></li>
+              <li><a href="#">REBIRD</a></li>
+              <li><a href="#">VEILANCE</a></li>
+            </ul>
           </li>
         </ul>
         <div class="util">
@@ -296,6 +373,19 @@
               </div>
             </div>
 
+          </div>
+          <div class="best-swiper-pagination"></div>
+          <!-- If we need pagination -->
+
+
+          <!-- If we need navigation buttons -->
+          <div class="best-btn-wrap">
+            <button type="button" class="btn-before-black">
+              <i class="hidden">이전</i>
+            </button>
+            <button type="button" class="btn-after-black">
+              <i class="hidden">다음</i>
+            </button>
           </div>
         </div>
       </div>
